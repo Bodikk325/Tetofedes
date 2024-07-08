@@ -1,0 +1,41 @@
+<div class="container h-[90vh] flex flex-col justify-center mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-4">Kapcsolat</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-[10rem]">
+      <!-- Form Section -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">Kérjen árajánlatot!</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Név</label>
+            <input id="name" type="text" formControlName="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+            <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched" class="text-red-500 text-sm">Name is required</div>
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium">Telefonszám</label>
+            <input id="phone" type="text" formControlName="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+            <div *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched" class="text-red-500 text-sm">Phone Number is required</div>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input id="email" type="email" formControlName="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+            <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched" class="text-red-500 text-sm">Valid Email is required</div>
+          </div>
+          <div>
+            <label for="note" class="block text-sm font-medium">Megjegyzés</label>
+            <textarea id="note" formControlName="note" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md" [disabled]="contactForm.invalid">Elküld</button>
+        </form>
+      </div>
+      <!-- Contact Info Section -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">Egyéb Elérhetőségeink</h2>
+        <p class="mb-4">Az esetek nagy részében már telefonon tudunk megközelítő árat mondani, így biztos lehet benne, hogy nem éri meglepetés.</p>
+        <p class="mb-4">Budapesten és Pest megyében 24 órán belüli kiszállást vállalunk. Mindig optimális ár-érték arányú tetőfedő anyagokkal dolgozunk.</p>
+        <p class="mb-4"><strong>Tel:</strong> +36 70 272 3541</p>
+        <p class="mb-4"><strong>Email:</strong> email</p>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded-md">Hívás</button>
+      </div>
+    </div>
+  </div>
+  

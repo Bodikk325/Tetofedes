@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tetofedes';
+
+  selected = "Tetőjavítás"
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  changeSelected(selected : string)
+  {
+    this.selected = selected;
+  }
 }
