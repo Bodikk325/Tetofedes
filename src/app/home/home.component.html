@@ -1,12 +1,13 @@
 <section class="w-full bg-cover bg-center text-white py-20" id="kezdolap"
-  style="background-image: url('assets/main2.png')">
+  style="background-image: url('assets/main2.webp')">
   <div class="container mx-auto bg-opacity-75  p-10 flex flex-col md:flex-row justify-between items-center">
     <div class="">
-      <h1 class="text-3xl font-bold mb-4 bg-black bg-opacity-90 py-4 px-12 md:w-2/3  text-center">Azonnal kell egy tetőfedő csapat?</h1>
-      <div class="bg-black bg-opacity-90 text-center md:w-1/2  py-2 px-12">
-        <p class="">Hívjon most! <br>
+      <h1 class="text-3xl font-bold mb-4 bg-black bg-opacity-90 py-4 px-12 md:w-2/3  text-center">Azonnal kell egy
+        tetőjavító csapat?</h1>
+      <div class="bg-black bg-opacity-90 text-center md:w-2/3  py-2 px-12">
+        <p class="">Hívjon most és igyekszünk azonnal nekikezdeni a munkának! <br>
           <a href="tel:+36 70 272 3541">
-            Tel: 36 70 272 3541
+            Tel: +36 70 272 3541
           </a>
         </p>
       </div>
@@ -14,10 +15,12 @@
     <div class="hidden md:block w-1/3 bg-white bg-opacity-80 text-black rounded-md p-5">
       <p class="mb-2 font-bold text-2xl">Ha nem annyira sürgős, akkor kérjen ajánlatot.</p>
       <p class="mb-2">Az esetek nagy részében már telefonon tudunk megközelítő árat mondani, így biztos lehet benne,
-        hogy nem éri meglepetés.</p>
+        hogy nem éri meglepetés és elkezdheti a munkát a tetőjavító csapat!</p>
       <p class="mb-2">Budapesten és Pest megyében 24 órán belüli kiszállást vállalunk. Mindig optimális ár-érték arányú
         tetőfedő anyagokkal dolgozunk.</p>
-      <p class="font-bold">Tel: 36702723541 </p>
+        <a href="tel:+36 70 272 3541">
+          Tel: +36 70 272 3541
+        </a>
       <button class="w-full py-2 mt-5 font-bold text-white rounded-md bg-blue-500" routerLink="kapcsolat">
         Kérjen árajánlatot!
       </button>
@@ -32,66 +35,83 @@
 
 <div class="container mx-auto py-10 text-center" id="szolgaltatasok">
   <h2 class="text-3xl font-bold mb-4">Tetőfedő munkák.</h2>
-  <p class="mb-6">30 év tapasztalattal rendelkező tetőfedő, ács, bádogos vállalkozásunk készséggel áll rendelkezésére
+  <p class="mb-6 px-5">30 év tapasztalattal rendelkező tetőfedő, ács és bádogos vállalkozásunk készséggel áll rendelkezésére,
+    legyen szó új tető építéséről, tetőfelújításról, javításokról vagy bádogos munkákról. Szakértelmünk és precizitásunk
+    garantálja, hogy minden munka a legmagasabb minőségben kerül kivitelezésre, az Ön teljes megelégedésére. Bízza ránk
+    tetője biztonságát és esztétikáját, és mi gondoskodunk róla, hogy otthona védelme a legjobb kezekben legyen.
   </p>
 </div>
 
 <section class="container mx-auto py-10">
-  <div *ngIf="selected == 'Tetőjavítás'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/zsindely.webp" alt="">
-      <p class="mt-3">Zsindelytető javitás és felújítás</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="zsindely">
+      <img class="w-full h-[15rem] object-cover" loading="lazy" src="assets/zsindely1.webp" alt="Zsindelytető">
+      <p class="mt-3">Zsindelytető javítás és felújítás</p>
       <p class="mt-3">Zsindelyes tetőfedés egy tartós és ellenálló tetőfedési megoldás, amely védi az épületet a
-        környezeti hatásoktól és a tűztől.</p>
+        környezeti hatásoktól és a tűztől. A javítás során gondoskodunk a megfelelő szellőzésről és vízszigetelésről,
+        hogy a tető élettartama maximálisan megnövekedjen.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/cserep.jpg" alt="">
-      <p class="mt-3">Cseréptető javitás és felújítás</p>
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="cserep">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/cserep1.webp" alt="Cseréptető">
+      <p class="mt-3">Cseréptető javítás és felújítás</p>
       <p class="mt-3">A tetőjavítás oka egyetlen, törött cserép cseréjétől egészen a komoly viharkárokig bármi lehet.
-      </p>
+        Munkánk során figyelmet fordítunk a cseréptető hosszú távú állóképességére és esztétikai megjelenésére,
+        biztosítva a tető teljes funkcionalitását.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/lapos.jpg" alt="">
-      <p class="mt-3">Lapostető javitás és felújítás</p>
-      <p class="mt-3">Lapostetők ázásának feltárása, megszüntetése a bitumenes lemez javításával.</p>
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="lapos">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/lapos1.webp" alt="Lapostető">
+      <p class="mt-3">Lapostető javítás és felújítás</p>
+      <p class="mt-3">Lapostetők ázásának feltárása, megszüntetése a bitumenes lemez javításával. Szakembereink alaposan
+        ellenőrzik a szigetelőrétegeket, és szükség esetén cserélik azokat, hogy az épület belseje száraz és védett
+        maradjon.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/lemez.webp" alt="">
-      <p class="mt-3">Lemeztető javitás és felújítás</p>
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="lemez">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/lemez1.webp" alt="Lemeztető">
+      <p class="mt-3">Lemeztető javítás és felújítás</p>
       <p class="mt-3">Cserepeslemez, trapézlemez és korcoltlemez fedésű tetőhéjazatok hibáinak feltárása és javítása.
-      </p>
+        Tapasztalt csapatunk a legmodernebb technológiákat alkalmazza a lemeztetők gyors és hatékony javításához,
+        minimalizálva a jövőbeli problémák kockázatát.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/pala.jpg" alt="">
-      <p class="mt-3">Palatető javitás és felújítás</p>
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="egyeb">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/pala.webp" alt="Palatető">
+      <p class="mt-3">Palatető javítás és felújítás</p>
       <p class="mt-3">Az öreg palatetők javítása, foltozása nehéz, de nem lehetetlen feladat. Gyakran egy helyi
-        javítással még menthető a palatető.</p>
+        javítással még menthető a palatető. Szakértelmünk biztosítja, hogy az öreg palatetők is megújuljanak, és még
+        évekig megbízhatóan szolgálják az épületet.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/laposteto_szigeteles.png" alt="">
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="egyeb">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/lapos4.webp" alt="Lapostető">
       <p class="mt-3">Lapostető szigetelés</p>
       <p class="mt-3">Lapostető szigetelés a legmodernebb bitumenes lemezekkel akár 30 év gyártói garanciával. Nem csak
-        Budapesten.</p>
+        Budapesten. Az általunk alkalmazott anyagok és technológiák garantálják a maximális vízzáróságot és
+        hőszigetelést, így otthona energiatakarékosabbá válik.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/bontas.jpg" alt="">
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="egyeb">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/bontas.webp" alt="Tetőbontás">
       <p class="mt-3">Tetőbontás</p>
-      <p class="mt-3">Újítandó vagy lebontandó tetőjét lebontjuk szakszerűen és gyorsan!</p>
+      <p class="mt-3">Újítandó vagy lebontandó tetőjét lebontjuk szakszerűen és gyorsan! Gondoskodunk a bontási
+        hulladékok megfelelő elszállításáról és újrahasznosításáról is, hogy a környezetvédelmi szempontok is
+        teljesüljenek.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/ereszcsatorna.jpg" alt="">
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="egyeb">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/tisztitas.webp" alt="Eresztisztítás">
       <p class="mt-3">Ereszcsatorna tisztítás</p>
-      <p class="mt-3">Vállalunk ereszcsatorna tisztítást, javítást Budapesten és Pest megyében. Kézi és gépi tisztítást egyaránt.</p>
+      <p class="mt-3">Vállalunk ereszcsatorna tisztítást, javítást Budapesten és Pest megyében. Kézi és gépi tisztítást
+        egyaránt. Rendszeres karbantartással megelőzzük az eltömődések és szivárgások kialakulását, hogy az
+        ereszcsatornák hosszú élettartamúak legyenek.</p>
     </div>
-    <div class="p-4 border rounded hover:shadow-lg">
-      <img class="w-full h-[15rem] object-cover" src="assets/kemeny.jpg" alt="">
+    <div class="p-4 border rounded hover:shadow-lg cursor-pointer" routerLink="egyeb">
+      <img loading="lazy" class="w-full h-[15rem] object-cover" src="assets/kemeny.webp" alt="Kéménybontás">
       <p class="mt-3">Kéménybontás</p>
-      <p class="mt-3">Kémények bontását vállaljuk, segítünk az esetlegesen szükséges engedélyek beszerzésében is.</p>
+      <p class="mt-3">Kémények bontását vállaljuk, segítünk az esetlegesen szükséges engedélyek beszerzésében is.
+        Tapasztalt csapatunk biztosítja a gyors és biztonságos kéménybontást, valamint az épület statikai épségének
+        megőrzését.</p>
     </div>
   </div>
 </section>
 
-<section class="w-full bg-[#F7F2F1] text-black py-20">
+
+<section class="w-full bg-[#F7F2F1] text-black py-20 px-5">
   <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
     <div class="md:w-1/2">
       <h2 class="text-3xl font-bold mb-4">TETŐFEDÉS ÉS TETŐFELÚJÍTÁS AKÁR 20 ÉV GARANCIÁVAL!</h2>
@@ -99,90 +119,150 @@
         szakvéleményünket. Tetőfedő munkáinkat csak szakszerű, a műszaki irányelveknek megfelelően készítjük.</p>
     </div>
     <div class="md:w-1/2 flex justify-end">
-      <img src="assets/20ev.png" alt="Image" class="w-44 rounded-md border-gray-200 border-[1px] border-solid">
+      <img loading="lazy" src="assets/20ev.webp" alt="Image" class="w-44 rounded-md border-gray-200 border-[1px] border-solid">
     </div>
   </div>
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
     <div class="p-4 bg-white text-black rounded relative">
       <p class="font-bold">Előzetes ajánlat becslés</p>
-      <p class="mt-5">Az esetek nagy részében már telefonon tudunk megközelítő árat mondani, így biztos lehet benne, hogy nem éri meglepetés.</p>
-      <img src="assets/check.svg" class="w-10 absolute right-2 top-2" alt="">
+      <p class="mt-5">Az esetek nagy részében már telefonon tudunk megközelítő árat mondani, így biztos lehet benne,
+        hogy nem éri meglepetés.</p>
+      <img loading="lazy" src="assets/check.svg" class="w-10 absolute right-2 top-2" alt="Pipa">
     </div>
     <div class="p-4 bg-white text-black rounded relative">
       <p class="font-bold">Teljeskörű garancia</p>
-      <p class="mt-5">Minden munkánkra teljeskörű garanciát vállalunk, legyen szó új tetőról vagy javításról, szigetelésről vagy bádogozásról.</p>
-      <img src="assets/check.svg" class="w-10 absolute right-2 top-2" alt="">
-    </div>
+      <p class="mt-5">Minden munkánkra teljeskörű garanciát vállalunk, legyen szó új tetőról vagy javításról,
+        szigetelésről vagy bádogozásról.</p>
+      <img loading="lazy" src="assets/check.svg" class="w-10 absolute right-2 top-2" alt="Pipa">
+    </div> 
     <div class="p-4 bg-white text-black rounded relative">
       <p class="font-bold">Garantáltan a legjobb ár</p>
-      <p class="mt-5">Cégünk a legjobb minőségű anyagokat használja, de nem kívánunk keresni az alapanyagokon ezért azokat jelentős kedvezménnyel tudjuk biztosítani.</p>
-      <img src="assets/check.svg" class="w-10 absolute right-2 top-2" alt="">
+      <p class="mt-5">Cégünk a legjobb minőségű anyagokat használja, de nem kívánunk keresni az alapanyagokon ezért
+        azokat jelentős kedvezménnyel tudjuk biztosítani.</p>
+      <img loading="lazy" src="assets/check.svg" class="w-10 absolute right-2 top-2" alt="Pipa">
     </div>
   </div>
 </section>
 
-<section class="container mx-auto py-10" id="referenciak">
+
+<section *ngIf="false" class="container mx-auto py-10" id="referenciak">
   <h2 class="text-3xl font-bold mb-4">Eddigi munkáink</h2>
   <div class="flex flex-col md:flex-row w-full flex-wrap justify-between items-center">
-    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/kupalatet%20felhelyezess.webp" alt="Gallery Image 1" class="w-[20rem] h-[20rem] object-cover mt-10">
-    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/kemenybadog%20javitas.webp" alt="Gallery Image 2" class="w-[20rem] h-[20rem] object-cover mt-10">
-    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/teto-hoszigeteles1.webp" alt="Gallery Image 3" class="w-[20rem] h-[20rem] object-cover mt-10">
-    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/acsmunka-fooldal.webp" alt="Gallery Image 3" class="w-[20rem] h-[20rem] object-cover mt-10">
+    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/kupalatet%20felhelyezess.webp" alt="Gallery Image 1"
+      class="w-[20rem] h-[20rem] object-cover mt-10">
+    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/kemenybadog%20javitas.webp" alt="Gallery Image 2"
+      class="w-[20rem] h-[20rem] object-cover mt-10">
+    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/teto-hoszigeteles1.webp" alt="Gallery Image 3"
+      class="w-[20rem] h-[20rem] object-cover mt-10">
+    <img src="https://www.sostetofedes.hu/img/uploaded/referencia/acsmunka-fooldal.webp" alt="Gallery Image 3"
+      class="w-[20rem] h-[20rem] object-cover mt-10">
   </div>
   <div class="w-full flex justify-center items-center">
     <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded">További munkáink</button>
-    </div>
+  </div>
 </section>
 
-<section class="container mx-auto py-10">
-  <h2 class="text-3xl font-bold mb-4">Rólunk mondták:</h2> 
+<section *ngIf="false" class="container mx-auto py-10">
+  <h2 class="text-3xl font-bold mb-4">Rólunk mondták:</h2>
   <p class="font-bold text-3xl">(Ezt a részt akkor kifogjuk majd szedni!)</p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div class="p-4 border rounded">
       <div class="flex items-center mb-2">
-        <img src="https://www.sostetofedes.hu/img/avatar.png" alt="Profile Icon" class="w-8 h-8 rounded-full mr-2">
+        <img loading="lazy" src="https://www.sostetofedes.hu/img/avatar.webp" alt="Profile Icon" class="w-8 h-8 rounded-full mr-2">
         <div class="flex space-x-1 text-yellow-500">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
       </div>
-      <p>Rövid határidővel, és profin dolgoztak a srácok. A legnagyobb melegben is maximálisan teljesítettek. Barátságos, megbízható, jól kommunikáló társaság. Csendesen, tisztán, biztonságosan végezték a munkájukat. Jó szívvel ajánlom őket!</p>
+      <p>Rövid határidővel, és profin dolgoztak a srácok. A legnagyobb melegben is maximálisan teljesítettek.
+        Barátságos, megbízható, jól kommunikáló társaság. Csendesen, tisztán, biztonságosan végezték a munkájukat. Jó
+        szívvel ajánlom őket!</p>
     </div>
     <div class="p-4 border rounded">
       <div class="flex items-center mb-2">
-        <img src="https://www.sostetofedes.hu/img/avatar.png" alt="Profile Icon" class="w-8 h-8 rounded-full mr-2">
+        <img loading="lazy" src="https://www.sostetofedes.hu/img/avatar.webp" alt="Profile Icon" class="w-8 h-8 rounded-full mr-2">
         <div class="flex space-x-1 text-yellow-500">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
       </div>
-      <p>Rövid határidővel, és profin dolgoztak a srácok. A legnagyobb melegben is maximálisan teljesítettek. Barátságos, megbízható, jól kommunikáló társaság. Csendesen, tisztán, biztonságosan végezték a munkájukat. Jó szívvel ajánlom őket!</p>
+      <p>Rövid határidővel, és profin dolgoztak a srácok. A legnagyobb melegben is maximálisan teljesítettek.
+        Barátságos, megbízható, jól kommunikáló társaság. Csendesen, tisztán, biztonságosan végezték a munkájukat. Jó
+        szívvel ajánlom őket!</p>
     </div>
     <div class="p-4 border rounded">
       <div class="flex items-center mb-2">
-        <img src="https://www.sostetofedes.hu/img/avatar.png" alt="Profile Icon" class="w-8 h-8 rounded-full mr-2">
-        <div class="flex space-x-1 text-yellow-500">
+        <img loading="lazy" src="https://www.sostetofedes.hu/img/avatar.webp" alt="Profile Icon" class="w-8 h-8 rounded-full mr-2">
+        <div  class="flex space-x-1 text-yellow-500">
           <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
       </div>
-      <p>Rövid határidővel, és profin dolgoztak a srácok. A legnagyobb melegben is maximálisan teljesítettek. Barátságos, megbízható, jól kommunikáló társaság. Csendesen, tisztán, biztonságosan végezték a munkájukat. Jó szívvel ajánlom őket!</p>
+      <p>Rövid határidővel, és profin dolgoztak a srácok. A legnagyobb melegben is maximálisan teljesítettek.
+        Barátságos, megbízható, jól kommunikáló társaság. Csendesen, tisztán, biztonságosan végezték a munkájukat. Jó
+        szívvel ajánlom őket!</p>
     </div>
   </div>
 </section>
 
-<section class="container mx-auto py-10" id="gyik">
+<section class="container px-5 mx-auto py-10" id="gyik">
   <h2 class="text-3xl font-bold mb-4">GYIK</h2>
   <div>
     <details class="mb-2 border-2 rounded-md shadow-md p-4">
       <summary class="font-semibold">Milyen árakon dolgoznak?</summary>
-      <p class="mt-2">Minden tető teljesen egyedi. Rengeteg körümény befolyásolja az árazást, pl magasság, hozzáférhetőség, meredekség, használt anyagok, távolság stb. Pontos árakat csak helyszíni szemle után tudunk adni.</p>
+      <p class="mt-2">Minden tető teljesen egyedi. Rengeteg körümény befolyásolja az árazást, pl magasság,
+        hozzáférhetőség, meredekség, használt anyagok, távolság stb. Pontos árakat csak helyszíni szemle után tudunk
+        adni.</p>
+    </details>
+
+    <details class="mb-2 border-2 rounded-md shadow-md p-4">
+      <summary class="font-semibold">Milyen gyakran kell ellenőriztetni a tetőt?
+      </summary>
+      <p class="mt-2">Javasoljuk, hogy évente legalább egyszer ellenőriztesse tetőjét, különösen az őszi és tavaszi
+        időszakokban. Emellett, nagyobb viharok vagy havazások után is érdemes átvizsgálni a tetőt az esetleges
+        sérülések miatt.</p>
     </details>
     <details class="mb-2 border-2 rounded-md shadow-md p-4">
-      <summary class="font-semibold">Milyen tetőfedő anyag a legolcsóbb?</summary>
-      <p class="mt-2">Különböző hullámlemezekből lehet nagyon olcsót találni (nem fémből vannak), ezeket maximum a kutyaházra ajánljuk a kertben. Trapéz vagy cserepeslemez elég költséghatékony.</p>
+      <summary class="font-semibold"> Mit tartalmaz az árajánlat?
+      </summary>
+      <p class="mt-2">Az árajánlat tartalmazza a munkadíjat, az anyagköltséget, és minden egyéb felmerülő költséget. Az
+        árajánlatot részletesen kidolgozzuk, hogy ügyfeleink pontosan lássák, mire számíthatnak a munka során.</p>
     </details>
     <details class="mb-2 border-2 rounded-md shadow-md p-4">
-      <summary class="font-semibold">Beázott a tetőm, a megázott festést, esetleg vakolatot kívül is javítják?
-    </summary>
-      <p class="mt-2">Általában nem, de sokszor tudunk ajánlani rá valakit.</p>
+      <summary class="font-semibold">Mennyi időbe telik egy tetőjavítás?
+      </summary>
+      <p class="mt-2">A tetőjavítás időtartama a sérülés mértékétől és a tető típusától függ. Általában kisebb javítások
+        néhány órától egy napig tarthatnak, míg a nagyobb, kiterjedtebb munkálatok több napot vagy akár hetet is igénybe
+        vehetnek.</p>
+    </details>
+    <details class="mb-2 border-2 rounded-md shadow-md p-4">
+      <summary class="font-semibold">Milyen területen vállalnak munkát?
+      </summary>
+      <p class="mt-2">Budapesten és Pest megyében vállalunk tetőjavítási és felújítási munkákat. Külön megállapodás
+        alapján távolabbi helyszíneken is dolgozunk, erről bővebb tájékoztatást kollégáinktól kérhet.</p>
+    </details>
+    <details class="mb-2 border-2 rounded-md shadow-md p-4">
+      <summary class="font-semibold">Milyen jelek utalnak arra, hogy szükség van a tető javítására?
+      </summary>
+      <p class="mt-2">Néhány figyelmeztető jel, amit érdemes figyelni: beázások, nedves foltok a mennyezeten, hiányzó
+        vagy törött tetőcserepek, repedezett vagy korhadt faanyagok, illetve meglazult tetőelemek.</p>
+    </details>
+    <details class="mb-2 border-2 rounded-md shadow-md p-4">
+      <summary class="font-semibold">Mi történik, ha nem javíttatom meg időben a tetőt?
+      </summary>
+      <p class="mt-2">Ha a tetőt nem javíttatja meg időben, a kisebb problémák súlyosbodhatnak, ami nagyobb költségeket
+        és komolyabb szerkezeti károkat okozhat. Ez akár az egész ház állapotát is veszélyeztetheti.</p>
+    </details>
+    <details class="mb-2 border-2 rounded-md shadow-md p-4">
+      <summary class="font-semibold"> Milyen gyakran kell tisztítani az ereszcsatornákat?
+      </summary>
+      <p class="mt-2">Az ereszcsatornákat évente legalább egyszer ajánlott tisztítani, különösen ősszel, amikor a
+        lehullott levelek könnyen eltömíthetik. Rendszeres karbantartással megelőzhetőek az eltömődések és a
+        szivárgások, ami hosszabb élettartamot biztosít az ereszcsatornáknak.</p>
+    </details>
+    <details class="mb-2 border-2 rounded-md shadow-md p-4">
+      <summary class="font-semibold">Mit tegyek, ha beázik a tetőm?
+      </summary>
+      <p class="mt-2">Ha beázik a tető, mielőbb vegye fel velünk a kapcsolatot, hogy szakembereink felmérhessék a
+        károkat és megkezdhessék a javítást. A gyors beavatkozás megelőzheti a további károk kialakulását és
+        minimalizálja a javítás költségeit.</p>
     </details>
   </div>
 </section>

@@ -1,4 +1,4 @@
-<div class="container h-[90vh] flex flex-col justify-center mx-auto p-4">
+<div class="container h-[90vh] flex flex-col min-h-screen justify-center mx-auto p-4">
     <h1 class="text-3xl font-bold mb-4">Kapcsolat</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-[10rem]">
       <!-- Form Section -->
@@ -24,7 +24,12 @@
             <label for="note" class="block text-sm font-medium">Megjegyzés</label>
             <textarea id="note" formControlName="note" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"></textarea>
           </div>
-          <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md" [disabled]="contactForm.invalid">Elküld</button>
+          <p *ngIf="success">Sikeres kapcsolatfelvétel, kollégáink hamarosan keresni fognak a megadott elérhetőségeken!</p>
+          <p *ngIf="error">Hiba történt a kapcsolatfelvétel során, kérünk probálkozz újra később vagy válassz más kapcsolatfelvételi formát!</p>
+          <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md" [disabled]="contactForm.invalid || loading">
+            <p *ngIf="loading">Betöltés..</p>
+            <p *ngIf="!loading">Elküld</p>
+          </button>
         </form>
       </div>
       <!-- Contact Info Section -->
@@ -32,9 +37,13 @@
         <h2 class="text-xl font-bold mb-4">Egyéb Elérhetőségeink</h2>
         <p class="mb-4">Az esetek nagy részében már telefonon tudunk megközelítő árat mondani, így biztos lehet benne, hogy nem éri meglepetés.</p>
         <p class="mb-4">Budapesten és Pest megyében 24 órán belüli kiszállást vállalunk. Mindig optimális ár-érték arányú tetőfedő anyagokkal dolgozunk.</p>
-        <p class="mb-4"><strong>Tel:</strong> +36 70 272 3541</p>
-        <p class="mb-4"><strong>Email:</strong> email</p>
-        <button class="bg-blue-500 text-white py-2 px-4 rounded-md">Hívás</button>
+        <a href="tel:+36 70 272 3541">
+          <strong>Tel:</strong> +36 70 272 3541
+        </a>
+        <p class="mb-4"> <strong>Email:</strong> info&#64;tetojavitas-most.hu</p>
+        <a href="tel:+36 70 272 3541">
+          <button class="bg-blue-500 text-white py-2 px-4 rounded-md">Hívás</button>
+          </a>
       </div>
     </div>
   </div>

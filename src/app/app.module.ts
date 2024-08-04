@@ -8,6 +8,14 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestingComponent } from './testing/testing.component';
+import { ZsindelyComponent } from './zsindely/zsindely.component';
+import { CserepComponent } from './cserep/cserep.component';
+import { LaposComponent } from './lapos/lapos.component';
+import { LemezComponent } from './lemez/lemez.component';
+import { EgyebComponent } from './egyeb/egyeb.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +23,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TestingComponent,
+    ZsindelyComponent,
+    CserepComponent,
+    LaposComponent,
+    LemezComponent,
+    EgyebComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
